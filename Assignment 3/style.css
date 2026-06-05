@@ -1,0 +1,152 @@
+/* General Website Styling */
+body {
+    background-color: #f0f8ff;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding-top: 80px;
+}
+
+/* Fixed Navbar */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #333;
+    padding: 15px;
+    z-index: 1000;
+}
+
+.navbar a {
+    color: white;
+    margin-right: 20px;
+    text-decoration: none;
+}
+
+/* Heading Styles */
+h1, h2 {
+    color: darkblue;
+}
+
+/* ID Selector */
+#special-heading {
+    color: crimson;
+    text-align: center;
+}
+
+/* Element Selector */
+p {
+    font-size: 16px;
+    color: #333;
+}
+
+/* Class Selector */
+.highlight {
+    background-color: lightyellow;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+/* Div Styling */
+.content-box {
+    width: 300px;
+    padding: 40px;
+    border: 2px solid black;
+    margin: 15px;
+    box-sizing: border-box;
+    background-color: #ffffff;
+}
+
+/* Span Styling */
+.highlight-text {
+    color: red;
+    font-weight: bold;
+}
+
+/* Text Alignment */
+.center-text {
+    text-align: center;
+}
+
+/* Relative Position */
+.main-content {
+    position: relative;
+    padding: 20px;
+}
+
+/* Absolute Positioned Box */
+.important-box {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background-color: orange;
+    padding: 10px;
+    border: 1px solid black;
+}
+
+/* Sticky Heading */
+.sticky-heading {
+    position: sticky;
+    top: 80px;
+    background-color: yellow;
+    padding: 10px;
+}
+
+img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.photos-flex {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.photos-grid {
+    display: grid;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.photos-flex img,
+.photos-grid img {
+    border-radius: 10px;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+
+    .photos-flex img {
+        width: 100%;
+    }
+
+    .photos-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Tablet */
+@media (min-width: 769px) and (max-width: 1024px) {
+
+    .photos-flex img {
+        width: calc(50% - 8px);
+    }
+
+    .photos-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Desktop */
+@media (min-width: 1025px) {
+
+    .photos-flex img {
+        width: calc(25% - 12px);
+    }
+
+    .photos-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
